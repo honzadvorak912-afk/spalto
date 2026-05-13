@@ -407,3 +407,8 @@ img {
   border-radius: 2px;
   margin-bottom: 1rem;
 }
+
+
+/* ---- REVEAL FIX ---- */
+.reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+.revealed { opacity: 1 !important; transform: none !important; }
