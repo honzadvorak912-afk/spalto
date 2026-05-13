@@ -376,3 +376,14 @@
   font-size: 13px;
   min-height: 18px;
 }
+
+/* ---- SERVICE CARD IMAGES ---- */
+.service-card-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  display: block;
+  margin: -1.4rem -1.4rem 1rem -1.4rem;
+  width: calc(100% + 2.8rem);
+}
