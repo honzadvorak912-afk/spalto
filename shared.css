@@ -222,14 +222,17 @@ img {
   font-weight: 400;
 }
 
-.nav-links a:hover,
-.nav-links a.active {
+.nav-links a:hover {
   color: var(--color-text);
   background: var(--color-bg-secondary);
 }
 
 .nav-links a.active {
-  font-weight: 500;
+  color: var(--color-accent) !important;
+  font-weight: 600;
+  background: transparent;
+  border-bottom: 2px solid var(--color-accent);
+  border-radius: 0;
 }
 
 .nav-cta {
