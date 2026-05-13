@@ -232,3 +232,33 @@
   padding-top: 10px;
 }
 .wood-card.wood-open .wood-details-panel { display: block; }
+
+/* ---- WOOD DETAIL TABLE ---- */
+.wood-detail-popis {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+.wood-detail-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+}
+.wood-detail-table th {
+  text-align: left;
+  padding: 5px 8px 5px 0;
+  color: var(--color-text-light);
+  font-weight: 500;
+  white-space: nowrap;
+  vertical-align: top;
+  width: 90px;
+}
+.wood-detail-table td {
+  padding: 5px 0;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+  border-bottom: 1px solid var(--color-border);
+}
+.wood-detail-table tr:last-child td { border-bottom: none; }
