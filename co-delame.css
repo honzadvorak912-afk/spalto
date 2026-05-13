@@ -105,3 +105,13 @@
   color: var(--color-text-muted);
   line-height: 1.8;
 }
+
+/* ---- REAL SERVICE IMAGES ---- */
+.service-real-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-xl);
+  display: block;
+  border: 1px solid var(--color-border);
+}
