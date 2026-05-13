@@ -183,3 +183,20 @@
   font-size: 13px;
   color: rgba(255,248,240,0.65);
 }
+
+/* ---- REFERENCE IMAGES ---- */
+.ref-hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.ref-cat-img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  display: block;
+  margin: -1.5rem -1.5rem 1rem -1.5rem;
+  width: calc(100% + 3rem);
+}
