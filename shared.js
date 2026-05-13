@@ -28,17 +28,17 @@
 
   /* ---- Smooth reveal on scroll (Intersection Observer) ---- */
   function revealOnScroll() {
-    if (!window.IntersectionObserver) return;
     var els = document.querySelectorAll(".reveal");
-    var io  = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("revealed");
-          io.unobserve(e.target);
-        }
+    // Immediately show all - no animation issues
+    els.forEach(function(el) { el.classList.add("revealed"); });
+    // Also run observer for elements added later
+    if (!window.IntersectionObserver) return;
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) { e.target.classList.add("revealed"); io.unobserve(e.target); }
       });
-    }, { threshold: 0.12 });
-    els.forEach(function (el) { io.observe(el); });
+    }, { threshold: 0 });
+    els.forEach(function(el) { io.observe(el); });
   }
 
   /* ---- Mobile nav toggle ---- */
