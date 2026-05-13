@@ -10,9 +10,14 @@
   function setActiveNav() {
     var links = document.querySelectorAll(".nav-links a");
     var path  = window.location.pathname.split("/").pop() || "index.html";
+    if (path === "") path = "index.html";
     links.forEach(function (a) {
-      var href = a.getAttribute("href").split("/").pop();
-      if (href === path) a.classList.add("active");
+      var href = a.getAttribute("href").split("/").pop().split("#")[0];
+      if (href === path) {
+        a.classList.add("active");
+      } else {
+        a.classList.remove("active");
+      }
     });
   }
 
