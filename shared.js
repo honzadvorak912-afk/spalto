@@ -53,7 +53,13 @@
     if (!toggle || !menu) return;
     toggle.addEventListener("click", function () {
       var open = menu.classList.toggle("nav-open");
-      toggle.setAttribute("aria-expanded", open);
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    menu.querySelectorAll("a").forEach(function(a) {
+      a.addEventListener("click", function() {
+        menu.classList.remove("nav-open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
     });
   }
 
