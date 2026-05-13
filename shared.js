@@ -87,6 +87,18 @@
     });
   }
 
+  /* ---- Wood card toggle ---- */
+  function woodToggle() {
+    document.addEventListener("click", function(e) {
+      var btn = e.target.closest(".wood-toggle");
+      if (!btn) return;
+      var card = btn.closest(".wood-card");
+      if (!card) return;
+      var open = card.classList.toggle("wood-open");
+      btn.setAttribute("aria-expanded", open);
+    });
+  }
+
   /* ---- Init ---- */
   document.addEventListener("DOMContentLoaded", function () {
     setActiveNav();
@@ -95,5 +107,6 @@
     mobileNav();
     recommendForm();
     contactForm();
+    woodToggle();
   });
 })();
