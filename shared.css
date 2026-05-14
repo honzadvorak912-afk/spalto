@@ -1,3 +1,23 @@
+
+/* ---- NAV TOGGLE (hamburger) ---- */
+.nav-toggle-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+}
+.nav-toggle-btn span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--color-text);
+  border-radius: 2px;
+  transition: 0.2s;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:wght@300;400;500&display=swap');
 
 /* =============================================
@@ -425,6 +445,15 @@ img {
    MOBILNI VERZE - max 640px
    ============================================== */
 @media (max-width: 640px) {
+  /* Kontakt v mobilnim menu vypada jako normalni link */
+  .nav-links .nav-cta {
+    background: transparent !important;
+    color: var(--color-text) !important;
+    padding: 14px 1rem !important;
+    border-radius: 0 !important;
+    font-weight: 500 !important;
+  }
+
 
   /* Navigace - skryj linky, zobraz hamburger */
   .nav-links {
@@ -445,7 +474,14 @@ img {
   }
   .nav-links li { border-bottom: 1px solid var(--color-border); }
   .nav-links li:last-child { border-bottom: none; }
-  .nav-links a { padding: 14px 0 !important; font-size: 16px !important; display: block; }
+  .nav-links a {
+    padding: 14px 1rem !important;
+    font-size: 16px !important;
+    display: block;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: var(--color-text) !important;
+  }
   .nav-toggle-btn { display: flex !important; }
 
   /* Hero - jeden sloupec */
