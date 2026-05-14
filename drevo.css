@@ -198,11 +198,12 @@
 
 /* ---- WOOD SWATCH REAL IMAGES ---- */
 .wood-swatch-img {
-  width: 100%;
-  height: 80px;
-  object-fit: cover;
-  display: block;
-  flex-shrink: 0;
+  width: 100% !important;
+  height: 80px !important;
+  object-fit: cover !important;
+  display: block !important;
+  flex-shrink: 0 !important;
+  min-width: 0 !important;
 }
 
 /* ---- WOOD TOGGLE ---- */
