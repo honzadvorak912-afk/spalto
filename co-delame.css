@@ -165,14 +165,15 @@
   .co-section-text { font-size: 15px !important; }
 }
 
+
+}
+
 @media (max-width: 640px) {
-  .co-section { max-width: 100% !important; width: 100% !important; }
-  .co-section-title { font-size: 22px !important; }
-  .co-section-text { font-size: 15px !important; }
   .co-section-img {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    object-fit: contain !important;
+    max-height: 220px !important;
+    object-fit: cover !important;
   }
 }
