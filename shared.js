@@ -96,12 +96,15 @@
   /* ---- Wood card toggle ---- */
   function woodToggle() {
     document.addEventListener("click", function(e) {
-      var btn = e.target.closest(".wood-toggle");
+      var btn = e.target;
+      if (!btn.classList.contains("wood-toggle")) {
+        btn = btn.closest(".wood-toggle");
+      }
       if (!btn) return;
       var card = btn.closest(".wood-card");
       if (!card) return;
-      var open = card.classList.toggle("wood-open");
-      btn.setAttribute("aria-expanded", open);
+      card.classList.toggle("wood-open");
+      btn.setAttribute("aria-expanded", card.classList.contains("wood-open"));
     });
   }
 
