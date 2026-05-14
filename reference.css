@@ -208,3 +208,7 @@
 .ref-hero-card--noimg .ref-hero-text {
   padding: 2.5rem 3rem;
 }
+
+/* ---- REF HERO PADDING FIX ---- */
+.ref-hero-card--noimg { grid-template-columns: 1fr; }
+.ref-hero-card--noimg .ref-hero-text { padding: 2.5rem 3rem; }
