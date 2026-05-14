@@ -194,3 +194,16 @@
 .recommend-mini-form .form-msg {
   font-size: 12.5px;
 }
+
+/* ---- CHECKBOX FIX ---- */
+.checkbox-label input[type="checkbox"] {
+  width: 18px !important;
+  height: 18px !important;
+  accent-color: var(--color-accent) !important;
+  cursor: pointer;
+  border: 2px solid var(--color-border-dark) !important;
+  background: #fff !important;
+  flex-shrink: 0;
+  appearance: auto !important;
+  -webkit-appearance: checkbox !important;
+}
