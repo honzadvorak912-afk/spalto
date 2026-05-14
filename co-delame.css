@@ -20,13 +20,7 @@
   align-items: start;
 }
 
-.service-detail--reverse {
-  grid-template-columns: 1fr 1.2fr;
-}
 
-.service-detail--reverse .service-detail-visual {
-  order: -1;
-}
 
 .service-detail-title {
   font-family: var(--font-display);
