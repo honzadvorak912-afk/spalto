@@ -258,10 +258,24 @@ img {
 }
 
 .nav-cta {
-  background: var(--color-accent);
+  background: var(--color-accent) !important;
   color: #FFF8F0 !important;
   padding: 8px 20px !important;
   border-radius: var(--radius-md) !important;
+  font-weight: 500 !important;
+  border-bottom: none !important;
+}
+
+.nav-cta:hover {
+  background: var(--color-accent) !important;
+  color: #FFF8F0 !important;
+  opacity: 0.85 !important;
+}
+
+.nav-cta.active {
+  background: var(--color-accent) !important;
+  color: #FFF8F0 !important;
+  border-bottom: none !important;
   font-weight: 500 !important;
 }
 
