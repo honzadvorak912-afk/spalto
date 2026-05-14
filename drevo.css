@@ -233,7 +233,7 @@
   border-top: 1px solid var(--color-border);
   padding-top: 10px;
 }
-.wood-card.wood-open .wood-details-panel { display: block; }
+.wood-card.wood-open .wood-details-panel { display: block !important; }
 
 /* ---- WOOD DETAIL TABLE ---- */
 .wood-detail-popis {
