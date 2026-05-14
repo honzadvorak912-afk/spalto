@@ -200,3 +200,11 @@
   margin: -1.5rem -1.5rem 1rem -1.5rem;
   width: calc(100% + 3rem);
 }
+
+/* ---- REF HERO TEXT PADDING FIX ---- */
+.ref-hero-card--noimg {
+  grid-template-columns: 1fr;
+}
+.ref-hero-card--noimg .ref-hero-text {
+  padding: 2.5rem 3rem;
+}
