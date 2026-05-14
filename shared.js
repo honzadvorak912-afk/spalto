@@ -82,14 +82,13 @@
   function contactForm() {
     var form = document.getElementById("contact-form");
     if (!form) return;
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      var msg = form.querySelector(".form-msg");
-      if (msg) {
-        msg.textContent = "Vaše zpráva byla odeslána. Brzy se ozveme!";
-        msg.style.color = "#3B6D11";
+    // Formspree zpracuje odeslani - jen zobrazime potvrzeni
+    form.addEventListener("submit", function(e) {
+      var submitBtn = form.querySelector("button[type='submit']");
+      if (submitBtn) {
+        submitBtn.textContent = "Odesílám...";
+        submitBtn.disabled = true;
       }
-      form.reset();
     });
   }
 
