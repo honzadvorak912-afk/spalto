@@ -225,6 +225,8 @@
 .wood-toggle-close { display: none; }
 .wood-card.wood-open .wood-toggle-open { display: none; }
 .wood-card.wood-open .wood-toggle-close { display: inline; }
+.wood-card.wood-open .wood-details-panel { display: block !important; }
+
 .wood-details-panel {
   display: none;
   margin-top: 10px;
