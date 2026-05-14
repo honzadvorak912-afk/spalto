@@ -191,15 +191,7 @@
   object-fit: cover;
   display: block;
 }
-.ref-cat-img {
-  width: 100%;
-  height: 140px;
-  object-fit: cover;
-  border-radius: var(--radius-md) var(--radius-md) 0 0;
-  display: block;
-  margin: -1.5rem -1.5rem 1rem -1.5rem;
-  width: calc(100% + 3rem);
-}
+
 
 /* ---- REF HERO TEXT PADDING FIX ---- */
 .ref-hero-card--noimg {
@@ -212,3 +204,26 @@
 /* ---- REF HERO PADDING FIX ---- */
 .ref-hero-card--noimg { grid-template-columns: 1fr; }
 .ref-hero-card--noimg .ref-hero-text { padding: 2.5rem 3rem; }
+
+/* ---- REF CATEGORY IMG FIX ---- */
+.ref-category-card {
+  overflow: hidden;
+  padding: 0;
+}
+.ref-cat-img {
+  display: block;
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0;
+}
+.ref-category-card h3,
+.ref-category-card p {
+  padding: 0 1.5rem;
+}
+.ref-category-card h3 {
+  padding-top: 1.25rem;
+}
+.ref-category-card p {
+  padding-bottom: 1.5rem;
+}
