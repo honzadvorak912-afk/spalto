@@ -298,16 +298,15 @@
   font-weight: 500;
 }
 
-.swatch-img {
-  width: 56px;
-  height: 56px;
+.swatch {
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  object-fit: cover;
   border: 2px solid var(--color-border);
   transition: transform 0.2s, border-color 0.2s;
   display: block;
 }
-.swatch-item:hover .swatch-img {
+.swatch-item:hover .swatch {
   transform: scale(1.1);
   border-color: var(--color-accent-mid);
 }
