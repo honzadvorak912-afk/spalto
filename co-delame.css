@@ -158,7 +158,6 @@
 .co-section { max-width: 860px !important; }
 .co-section-title { font-size: 32px !important; }
 .co-section-text { font-size: 16px !important; }
-.co-section-img { max-width: 860px; }
 
 
   .co-section-title { font-size: 24px !important; }
@@ -173,7 +172,7 @@
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
-    max-height: 220px !important;
+    max-height: 200px !important;
     object-fit: cover !important;
   }
 }
