@@ -82,13 +82,28 @@
   function contactForm() {
     var form = document.getElementById("contact-form");
     if (!form) return;
-    // Formspree zpracuje odeslani - jen zobrazime potvrzeni
     form.addEventListener("submit", function(e) {
-      var submitBtn = form.querySelector("button[type='submit']");
-      if (submitBtn) {
-        submitBtn.textContent = "Odesílám...";
-        submitBtn.disabled = true;
-      }
+      e.preventDefault();
+      var btn = form.querySelector("button[type='submit']");
+      var msg = form.querySelector(".form-msg");
+      var origText = btn ? btn.textContent : '';
+      if (btn) { btn.textContent = "Odesílám..."; btn.disabled = true; }
+      fetch("https://formspree.io/f/mrejvwyy", {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" }
+      }).then(function(r) {
+        if (r.ok) {
+          if (msg) { msg.textContent = "Zpráva byla odeslána! Brzy se ozveme."; msg.style.color = "#3B6D11"; }
+          form.reset();
+        } else {
+          if (msg) { msg.textContent = "Chyba při odesílání. Zkuste to prosím znovu."; msg.style.color = "#c0392b"; }
+        }
+        if (btn) { btn.textContent = origText; btn.disabled = false; }
+      }).catch(function() {
+        if (msg) { msg.textContent = "Chyba při odesílání. Zkuste to prosím znovu."; msg.style.color = "#c0392b"; }
+        if (btn) { btn.textContent = origText; btn.disabled = false; }
+      });
     });
   }
 
