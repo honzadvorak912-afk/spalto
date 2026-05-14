@@ -419,123 +419,122 @@ img {
 
 
 
-/* =============================================
-   TABLET (max-width: 900px)
-   ============================================= */
-@media (max-width: 900px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-visual { display: none; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .intro-grid { grid-template-columns: 1fr; }
-  .wood-teaser-grid { grid-template-columns: 1fr; }
-  .recommend-inner { grid-template-columns: 1fr; }
-  .about-grid { grid-template-columns: 1fr; }
-  .about-wood-block { display: none; }
-  .facts-grid { grid-template-columns: repeat(2, 1fr); }
-  .philosophy-grid { grid-template-columns: 1fr; }
-  .service-detail { grid-template-columns: 1fr; }
-  .service-detail--reverse { grid-template-columns: 1fr; }
-  .service-detail--reverse .service-detail-visual { order: 0; }
-  .wood-grid { grid-template-columns: repeat(2, 1fr); }
-  .wood-intro-grid { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-  .ref-hero-card { grid-template-columns: 1fr; }
-  .ref-hero-text { padding: 1.5rem; }
-  .ref-categories-grid { grid-template-columns: repeat(2, 1fr); }
-  .ref-cta-inner { grid-template-columns: 1fr; }
-  .footer-inner { grid-template-columns: 1fr 1fr; }
-  .swatch-row { grid-template-columns: repeat(4, 1fr); }
-}
 
-/* =============================================
-   MOBIL (max-width: 600px)
-   ============================================= */
-@media (max-width: 600px) {
-  :root { --content-pad: 1rem; --nav-h: 56px; }
 
-  /* Navigace */
+/* ==============================================
+   MOBILNI VERZE - max 640px
+   ============================================== */
+@media (max-width: 640px) {
+
+  /* Navigace - skryj linky, zobraz hamburger */
   .nav-links {
-    display: none;
+    display: none !important;
     position: fixed;
-    top: var(--nav-h);
-    left: 0; right: 0;
+    top: 68px;
+    left: 0;
+    right: 0;
     background: var(--color-bg);
+    flex-direction: column !important;
+    padding: 0.5rem 1.5rem 1.5rem;
     border-bottom: 1px solid var(--color-border);
-    flex-direction: column;
-    padding: 0.5rem 1.25rem 1.25rem;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
     z-index: 199;
-    box-shadow: var(--shadow-md);
   }
-  .nav-links.nav-open { display: flex; }
-  .nav-links a { padding: 12px 0; font-size: 15px; border-bottom: 1px solid var(--color-border); border-radius: 0; }
-  .nav-links a:last-child { border-bottom: none; }
-  .nav-toggle-btn { display: flex; }
+  .nav-links.nav-open {
+    display: flex !important;
+  }
+  .nav-links li { border-bottom: 1px solid var(--color-border); }
+  .nav-links li:last-child { border-bottom: none; }
+  .nav-links a { padding: 14px 0 !important; font-size: 16px !important; display: block; }
+  .nav-toggle-btn { display: flex !important; }
 
-  /* Hero */
-  .hero { grid-template-columns: 1fr; padding: 2rem 1rem 1.5rem; gap: 1.5rem; }
-  .hero-title { font-size: 30px; }
-  .hero-desc { font-size: 14px; }
-  .hero-visual { display: none; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions .btn { width: 100%; justify-content: center; }
+  /* Hero - jeden sloupec */
+  .hero {
+    grid-template-columns: 1fr !important;
+    padding: 2rem 1rem !important;
+  }
+  .hero-visual { display: none !important; }
+  .hero-title { font-size: 32px !important; }
+  .hero-desc { font-size: 15px !important; max-width: 100% !important; }
+  .hero-actions { flex-direction: column !important; }
+  .hero-actions .btn { width: 100% !important; justify-content: center !important; }
 
-  /* Stats */
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stat { padding: 1rem; }
-  .stat-num { font-size: 24px; }
+  /* Stats - 2 sloupce */
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .stat { padding: 1rem !important; }
+  .stat-num { font-size: 26px !important; }
 
   /* Obecne sekce */
-  .section { padding: 2rem 1rem; }
-  .section-header { flex-direction: column; gap: 10px; align-items: flex-start; }
-  .section-title { font-size: 20px; }
+  .section { padding: 2rem 1rem !important; }
+  .section-header { flex-direction: column !important; gap: 10px !important; align-items: flex-start !important; }
+  .section-title { font-size: 22px !important; }
 
-  /* Sluzby - 1 sloupec */
-  .services-grid { grid-template-columns: 1fr; }
-  .service-card-img { height: 180px; }
+  /* Vsechny gridy pod sebe */
+  .services-grid,
+  .facts-grid,
+  .ref-categories-grid,
+  .wood-grid,
+  .swatch-row { grid-template-columns: 1fr !important; }
 
-  /* Intro */
-  .intro-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  /* Skryj drevene vzorniky v uvodu */
+  .wood-teaser-section { display: none !important; }
 
-  /* Wood teaser */
-  .wood-teaser-grid { grid-template-columns: 1fr; gap: 1.5rem; }
-  .swatch-row { grid-template-columns: repeat(3, 1fr); }
+  /* Intro sekce */
+  .intro-grid,
+  .wood-teaser-grid,
+  .recommend-inner,
+  .about-grid,
+  .philosophy-grid,
+  .contact-grid,
+  .ref-hero-card,
+  .ref-cta-inner,
+  .footer-inner,
+  .service-detail,
+  .service-detail--reverse,
+  .wood-intro-grid { grid-template-columns: 1fr !important; }
 
-  /* Recommend */
-  .recommend-inner { grid-template-columns: 1fr; }
-
-  /* O nas */
-  .about-grid { grid-template-columns: 1fr; }
-  .about-wood-block { display: none; }
-  .facts-grid { grid-template-columns: 1fr; }
-  .philosophy-grid { grid-template-columns: 1fr; }
-
-  /* Co delame */
-  .service-detail { grid-template-columns: 1fr; gap: 1.5rem; }
-  .service-detail--reverse { grid-template-columns: 1fr; }
-  .service-detail--reverse .service-detail-visual { order: 0; }
-  .service-detail-title { font-size: 22px; }
-
-  /* Drevo */
-  .wood-grid { grid-template-columns: 1fr; }
-  .wood-intro-grid { grid-template-columns: 1fr; }
-
-  /* Kontakt */
-  .contact-grid { grid-template-columns: 1fr; }
-  .form-row { grid-template-columns: 1fr; }
-
-  /* Reference */
-  .ref-hero-card { grid-template-columns: 1fr; }
-  .ref-hero-card--noimg .ref-hero-text { padding: 1.5rem; }
-  .ref-categories-grid { grid-template-columns: 1fr; }
-  .ref-cta-inner { grid-template-columns: 1fr; }
+  .about-wood-block { display: none !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .service-detail--reverse .service-detail-visual { order: 0 !important; }
 
   /* Footer */
-  .footer-inner { grid-template-columns: 1fr; gap: 1.25rem; }
-  .footer-bottom { flex-direction: column; gap: 4px; text-align: center; }
+  .footer-bottom { flex-direction: column !important; text-align: center !important; gap: 4px !important; }
 
   /* Page hero */
-  .page-hero { padding: 2rem 1rem 1.5rem; }
-  .page-hero h1 { font-size: 26px; }
+  .page-hero { padding: 2rem 1rem 1.5rem !important; }
+  .page-hero h1 { font-size: 26px !important; }
+
+  /* Karty sluzeb */
+  .service-card-img { height: 160px !important; }
+
+  /* Reference */
+  .ref-hero-text { padding: 1.25rem !important; }
+  .ref-categories-grid { grid-template-columns: 1fr !important; }
+}
+
+/* ==============================================
+   TABLET - max 900px
+   ============================================== */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr !important; }
+  .hero-visual { display: none !important; }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .services-grid { grid-template-columns: 1fr 1fr !important; }
+  .intro-grid,
+  .wood-teaser-grid,
+  .recommend-inner,
+  .about-grid,
+  .philosophy-grid,
+  .contact-grid,
+  .ref-hero-card,
+  .ref-cta-inner,
+  .service-detail,
+  .service-detail--reverse,
+  .wood-intro-grid { grid-template-columns: 1fr !important; }
+  .facts-grid { grid-template-columns: 1fr 1fr !important; }
+  .wood-grid { grid-template-columns: 1fr 1fr !important; }
+  .ref-categories-grid { grid-template-columns: 1fr 1fr !important; }
+  .footer-inner { grid-template-columns: 1fr 1fr !important; }
+  .about-wood-block { display: none !important; }
+  .form-row { grid-template-columns: 1fr !important; }
 }
